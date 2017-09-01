@@ -1,8 +1,7 @@
 import csv
 import os
 
-os.chdir(r"/home/bot-data_analysis-management/data/
-")
+os.chdir(r"/home/bot-data_analysis-management/data/")
 header_ary = ["loan_id", "account_id", "date", "amount", "duration", "payments", "status",";", "disp_id", "client_id", "type",";", "account_id", "district_id", "frequency", "date",";", "client_id" , "birth_number"]
 
 account_id=input('Enter the account id')
@@ -119,7 +118,6 @@ with open("card.csv",'r') as f:
             x = str(sn11)
             y = str(row[1])
             if y == disp_id :
-                print(x,y)
                 output_ary5.append(row[0])
                 output_ary5.append(row[2])
                 output_ary5.append(row[3])
@@ -132,7 +130,7 @@ with open("Sampleoutput.txt",'w') as f2:
     f2.write("\n")   
     for row in output_ary:
         for item in row:
-            f2.write(item + "  ")
+            f2.write(item + ",")
         f2.write(";")
     
         
