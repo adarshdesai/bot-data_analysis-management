@@ -8,12 +8,12 @@ sudo pip install -r requirements.txt
 ```
 ### Modules
 * **Speech** :
-             * Text to Speech:
+            * Text to Speech:
                ```
                import speech #This works when you are in the same folder as speech.py so change this accordingly
                speech.say('Hello!')
                ```
-             * Speech to Text:
+            * Speech to Text:
                  First Set These Variables According to your need in **speech.py**
                  ```
                   THRESHOLD = 120
@@ -25,7 +25,7 @@ sudo pip install -r requirements.txt
                  ```
                  speech.record_to_file('temp.wav') # saves recording to temp.wav.You can use any path instead of just the working dir.
                  ```
-             * Speech Recognition
+            * Speech Recognition
                ```
                speech.recognise('temp.wav') # returns the google api result as string.
                ```
