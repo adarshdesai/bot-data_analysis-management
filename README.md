@@ -9,7 +9,7 @@ git clone https://github.com/kaustav1996/bot-data_analysis-management/
 sudo pip install -r requirements.txt
 ```
 ### Modules
-**Speech**
+**Speech** (backend_functions/speech.py)
 * Text to Speech:
 
 ```
