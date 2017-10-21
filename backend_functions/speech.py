@@ -15,7 +15,7 @@ def punctuate(s):
 	s='%20'.join(s.strip().split(" "))
 	proc = subprocess.Popen("curl -d 'text="+s+"' http://bark.phon.ioc.ee/punctuator", stdout=subprocess.PIPE, shell=True)
 	(out, err) = proc.communicate()
-	return out
+	return out.decode("utf-8", "ignore")
 	
 def say(s):
 	import pyttsx
