@@ -1,8 +1,12 @@
 # Data Analysis & Management Bot
+**Description**:
+# Installation
 ```
 git clone https://github.com/kaustav1996/bot-data_analysis-management/
+sudo bash ./bot-data_analysis-management/setup.sh
 ```
 
+# Others
 
 ```
 # ./bot-data_analysis-management/
