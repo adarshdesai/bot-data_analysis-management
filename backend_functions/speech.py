@@ -9,6 +9,9 @@ THRESHOLD = 120
 CHUNK_SIZE = 80
 FORMAT = pyaudio.paInt16
 RATE = 44100
+def punctuate(s):
+	s='%20'.join(s.trim().split(" "))
+	return os.system("curl -d 'text="+s+"' http://bark.phon.ioc.ee/punctuator")
 def say(s):
 	import pyttsx
 	engine = pyttsx.init()
