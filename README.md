@@ -25,7 +25,7 @@ sudo pip install -r requirements.txt
                   FORMAT = pyaudio.paInt16
                   RATE = 44100
 ```
-                 Then
+Then
 ```
                  speech.record_to_file('temp.wav') # saves recording to temp.wav.You can use any path instead of just the working dir.
 ```
@@ -33,4 +33,4 @@ sudo pip install -r requirements.txt
 ```
                speech.recognise('temp.wav') # returns the google api result as string.
 ```
-               To use other APIs use the SpeechRecognition module available using pip.
+To use other APIs use the SpeechRecognition module available using pip.
