@@ -11,8 +11,12 @@ FORMAT = pyaudio.paInt16
 RATE = 44100
 def punctuate(s):
 	import os
+	import subprocess
 	s='%20'.join(s.strip().split(" "))
-	return os.system("curl -d 'text="+s+"' http://bark.phon.ioc.ee/punctuator").split(" ")[0]
+	proc = subprocess.Popen("curl -d 'text="+s+"' http://bark.phon.ioc.ee/punctuator", stdout=subprocess.PIPE, shell=True)
+	(out, err) = proc.communicate()
+	return out
+	
 def say(s):
 	import pyttsx
 	engine = pyttsx.init()
