@@ -43,3 +43,9 @@ speech.recognise('temp.wav') # returns the google api result as string.
 ```
 
 To use other APIs use the SpeechRecognition module available using pip.
+
+* Punctuate
+```
+speech.punctuate('Hello I am Kaustav') # returns the string with punctuations
+Hello, I am Kaustav
+```
