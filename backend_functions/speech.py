@@ -10,6 +10,7 @@ CHUNK_SIZE = 80
 FORMAT = pyaudio.paInt16
 RATE = 44100
 def punctuate(s):
+	import os
 	s='%20'.join(s.strip().split(" "))
 	return os.system("curl -d 'text="+s+"' http://bark.phon.ioc.ee/punctuator")
 def say(s):
