@@ -18,14 +18,18 @@ speech.say('Hello!')
 ```
 
 * Speech to Text:
+
 First Set These Variables According to your need in **speech.py** .
+
 ```
 THRESHOLD = 120
 CHUNK_SIZE = 80
 FORMAT = pyaudio.paInt16
 RATE = 44100
 ```
+
 Then
+
 ```
 speech.record_to_file('temp.wav') # saves recording to temp.wav.You can use any path instead of just the working dir.
 ```
@@ -33,4 +37,5 @@ speech.record_to_file('temp.wav') # saves recording to temp.wav.You can use any 
 ```
 speech.recognise('temp.wav') # returns the google api result as string.
 ```
+
 To use other APIs use the SpeechRecognition module available using pip.
