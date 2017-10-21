@@ -7,7 +7,7 @@ git clone https://github.com/kaustav1996/bot-data_analysis-management/
 sudo pip install -r requirements.txt
 ```
 ### Modules
-* **Speech** :
+**Speech** :
             * Text to Speech:
                ```
                import speech #This works when you are in the same folder as speech.py so change this accordingly
