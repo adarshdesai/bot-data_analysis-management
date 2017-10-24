@@ -150,4 +150,4 @@ def sentiment(s):
 	from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 	analyzer = SentimentIntensityAnalyzer()
 	vs = analyzer.polarity_scores(s)
-	return str(vs)
+	return vs
