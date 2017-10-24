@@ -20,7 +20,10 @@ def punctuate(s):
 def say(s):
 	import pyttsx
 	engine = pyttsx.init()
-	engine.say(s)
+	if not isinstance(s, (list, tuple)):
+        	s = [s]
+	for i in s:
+		engine.say(i)
 	engine.runAndWait()
 
 def is_silent(snd_data):
@@ -143,3 +146,8 @@ def recognise(voice):
 	    return "Google Speech Recognition could not understand audio"
 	except sr.RequestError as e:
 	    return "Could not request results from Google Speech Recognition service; {0}".format(e)
+def sentiment(s):
+	from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+	analyzer = SentimentIntensityAnalyzer()
+	vs = analyzer.polarity_scores(s)
+	return str(vs)
