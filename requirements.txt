@@ -1,4 +1,4 @@
 pyttsx
 SpeechRecognition
-pyaudio
 vaderSentiment
+apiai
