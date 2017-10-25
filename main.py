@@ -1,7 +1,7 @@
 import os.path
 import sys
 import json
-
+from backend_functions import speech
 try:
     import apiai
 except ImportError:
@@ -14,10 +14,9 @@ CLIENT_ACCESS_TOKEN = '7df34bbf717b412d97b7056c110b967e'
 
 
 def main():
-	 while(1):
+	 apiIntent=""
+	 while(1 and apiIntent!="bye"):
 	    stringu=raw_input()
-	    if(stringu=="exit"):
-		break
 	    ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN)
 
 	    request = ai.text_request()
@@ -32,8 +31,11 @@ def main():
 	   
 	    string = response.read().decode('utf-8')
 	    json_obj = json.loads(string)
-
-	    print(json_obj["result"]["fulfillment"]["speech"])
+	    apiIntent=json_obj["result"]["metadata"]["intentName"]
+	    if(apiIntent=="nameIntent"):
+		username=
+	    apiResp=json_obj["result"]["fulfillment"]["speech"]
+	    speech.say(apiResp)
 
 if __name__ == '__main__':
 	main()
