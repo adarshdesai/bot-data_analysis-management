@@ -1,5 +1,5 @@
 sudo pip install -r requirements.txt
-sudo apt-get install python-pyaudio
+sudo apt-get install python-pyaudio jackd2
 sudo tar -xvf /home/bot-data_analysis-management/data/trans.csv.tar.gz
 py_script="
 import nltk
