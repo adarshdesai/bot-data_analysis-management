@@ -1,0 +1,3 @@
+face_recognition/unknown/img2.jpeg,Kaustav Banerjee
+face_recognition/unknown/img2.jpeg,trump
+face_recognition/unknown/img.jpg,Anamika Dey
